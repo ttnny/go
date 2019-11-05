@@ -9,7 +9,7 @@ import (
 func main() {
 	http.HandleFunc("/", index)
 	http.HandleFunc("/api/echo", echo)
-	http.handleFunc("api/book", BooksHandleFunc)
+	http.HandleFunc("/api/book", BooksHandleFunc)
 
 	http.ListenAndServe(port(), nil)
 }
