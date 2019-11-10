@@ -2,17 +2,35 @@ package main
 
 import (
 	"fmt"
+	"github.com/golang/protobuf/proto"
 	"go/protobuf/simple/pb"
+	"io/ioutil"
+	"log"
 )
 
 func main() {
-	fmt.Println("hello world")
+	sm := doSimple()
 
-	doSimple()
+	writeToFile()
+
+	readFromFile()
 }
 
-func doSimple() {
-	sm := pb.SimpleMessage{
+func writeToFile(filename string, pb proto.Message) error {
+	out, err := proto.Marshal(pb)
+	if (err != nil) {
+		log.Fatalln("Can't serialise to bytes", err)
+		return err
+	}
+
+	if err := ioutil.WriteFile(filename, out, 0644); err != nil {
+		log.Fatalln("Can't write to file", err)
+		return err
+	}
+}
+
+func doSimple() *simplepb.SimpleMessage {
+	sm := simplepb.SimpleMessage{
 		Id: 12345,
 		IsSimple: true,
 		Name: "My Simple Message",
@@ -25,4 +43,6 @@ func doSimple() {
 	// Use getters & setters to access the fields
 	// because they have safety checks
 	fmt.Println(sm.GetId())
+
+	return &sm
 }
