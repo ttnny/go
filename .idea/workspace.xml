@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d9967401-8c10-4bb8-8c1f-ec9b06078768" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$" beforeDir="false" afterPath="$PROJECT_DIR$" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/go.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/go.iml" afterDir="false" />
+    <list default="true" id="d9967401-8c10-4bb8-8c1f-ec9b06078768" name="Default Changelist" comment="Update go mod dependencies">
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../java" beforeDir="false" afterPath="$PROJECT_DIR$/../java" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -27,6 +23,11 @@
   </component>
   <component name="ProjectId" id="1R5BuJZEJkys1biTWu0c8EKnWDz" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
     <property name="GO_FMT" value="true" />
@@ -39,7 +40,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.Go" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -51,73 +52,82 @@
       <recent name="C:\Users\ttnny\Google Drive\_WORKSPACE\learning\go\readings" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Go Build.go build go/protobuf/complex">
-    <configuration name="go build go/interfaces" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.gobench main_test.go">
+    <configuration name="BenchmarkBubbleSort10 in github.com/ttnny/go/benchmarks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/benchmarks" />
+      <framework value="gobench" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/interfaces/main.go" />
-      <package value="go/interfaces" />
+      <package value="github.com/ttnny/go/benchmarks" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^BenchmarkBubbleSort10$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go/pointers" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="BenchmarkBubbleSort1000 in github.com/ttnny/go/benchmarks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/benchmarks" />
+      <framework value="gobench" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/pointers/main.go" />
-      <package value="go/pointers" />
+      <package value="github.com/ttnny/go/benchmarks" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^BenchmarkBubbleSort1000$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go/protobuf/complex" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="BenchmarkBubbleSort100000 in github.com/ttnny/go/benchmarks" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/benchmarks" />
+      <framework value="gobench" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/protobuf/complex/main.go" />
-      <package value="go/protobuf/complex" />
+      <package value="github.com/ttnny/go/benchmarks" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^BenchmarkBubbleSort100000$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go/protobuf/enum" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestBubbleSort in github.com/ttnny/go/benchmarks (1)" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
+      <working_directory value="$PROJECT_DIR$/benchmarks" />
+      <framework value="gotest" />
       <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/protobuf/enum/main.go" />
-      <package value="go/protobuf/enum" />
+      <package value="github.com/ttnny/go/benchmarks" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestBubbleSort$" />
       <method v="2" />
     </configuration>
-    <configuration name="go build go/protobuf/simple" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="gobench main_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="go" />
-      <working_directory value="$PROJECT_DIR$" />
-      <kind value="PACKAGE" />
-      <filePath value="$PROJECT_DIR$/protobuf/simple/main.go" />
-      <package value="go/protobuf/simple" />
+      <working_directory value="$PROJECT_DIR$/benchmarks" />
+      <framework value="gobench" />
+      <kind value="FILE" />
+      <package value="github.com/ttnny/go" />
       <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/benchmarks/main_test.go" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build go/protobuf/complex" />
-        <item itemvalue="Go Build.go build go/protobuf/enum" />
-        <item itemvalue="Go Build.go build go/protobuf/simple" />
-        <item itemvalue="Go Build.go build go/interfaces" />
-        <item itemvalue="Go Build.go build go/pointers" />
+        <item itemvalue="Go Test.gobench main_test.go" />
+        <item itemvalue="Go Test.BenchmarkBubbleSort1000 in github.com/ttnny/go/benchmarks" />
+        <item itemvalue="Go Test.BenchmarkBubbleSort100000 in github.com/ttnny/go/benchmarks" />
+        <item itemvalue="Go Test.BenchmarkBubbleSort10 in github.com/ttnny/go/benchmarks" />
+        <item itemvalue="Go Test.TestBubbleSort in github.com/ttnny/go/benchmarks (1)" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -136,11 +146,57 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
     <MESSAGE value="Learn Go Web" />
-    <option name="LAST_COMMIT_MESSAGE" value="Learn Go Web" />
+    <MESSAGE value="Update go mod dependencies" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update go mod dependencies" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="504" y="83" key="#go_build_go/pointers" timestamp="1578137937964">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="504" y="83" key="#go_build_go/pointers/0.0.1536.834@0.0.1536.834" timestamp="1578137937964" />
+    <state x="405" y="19" key="CommitChangelistDialog2" timestamp="1579090914449">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="405" y="19" key="CommitChangelistDialog2/0.0.1536.834@0.0.1536.834" timestamp="1579090914449" />
+    <state x="550" y="177" key="FileChooserDialogImpl" timestamp="1578310521430">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="550" y="177" key="FileChooserDialogImpl/0.0.1536.834@0.0.1536.834" timestamp="1578310521430" />
+    <state width="721" height="378" key="GridCell.Tab.0.bottom" timestamp="1580195917482">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="721" height="378" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1580195917482" />
+    <state width="721" height="378" key="GridCell.Tab.0.center" timestamp="1580195917482">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="721" height="378" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1580195917482" />
+    <state width="721" height="378" key="GridCell.Tab.0.left" timestamp="1580195917482">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="721" height="378" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1580195917482" />
+    <state width="721" height="378" key="GridCell.Tab.0.right" timestamp="1580195917482">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="721" height="378" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1580195917482" />
+    <state x="369" y="64" key="SettingsEditor" timestamp="1579090782938">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="369" y="64" key="SettingsEditor/0.0.1536.834@0.0.1536.834" timestamp="1579090782938" />
+    <state x="451" y="155" key="Vcs.Push.Dialog.v2" timestamp="1579090919537">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="451" y="155" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1579090919537" />
+    <state x="816" y="155" width="672" height="678" key="search.everywhere.popup" timestamp="1580089155445">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="816" y="155" width="672" height="678" key="search.everywhere.popup/0.0.1536.834@0.0.1536.834" timestamp="1580089155445" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
