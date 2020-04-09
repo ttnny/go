@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"io"
-	"io/ioutil"
 	"os"
 )
 
@@ -27,34 +26,38 @@ func main() {
 	}
 	defer file.Close()
 
-	b1 := make([]byte, 5)
-	n1, err := f.Read(b1)
-	check(err)
+	fiveChars := make([]byte, 5)
 
-	fmt.Printf("%d bytes: %s\n", n1, string(b1[:n1]))
+	// Read the first 5 chars to the byte slice 'fiveChars'
+	// and return the number of bytes read and any error encountered.
+	// At end of file, Read returns 0, io.EOF
+	n, err := file.Read(fiveChars)
+	fmt.Printf("%d bytes: %s\n", n, string(fiveChars))
 
-	o2, err := f.Seek(6, 0)
-	check(err)
-	b2 := make([]byte, 2)
-	n2, err := f.Read(b2)
-	check(err)
-	fmt.Printf("%d bytes @ %d: ", n2, o2)
-	fmt.Printf("%v\n", string(b2[:n2]))
+	// Seek to a known location and Read from there.
+	threeChars := make([]byte, 3)
 
-	o3, err := f.Seek(6, 0)
+	// Set the offset for the next Read or Write on file
+	o, err := file.Seek(2, 0)
+
+	// Read 2 chars starting from index 2 as set above
+	n1, err := file.Read(threeChars)
+	fmt.Printf("%d bytes @ %d: %v\n", n1, o, string(threeChars))
+
+
+
+	o3, err := file.Seek(6, 0)
 	check(err)
 	b3 := make([]byte, 2)
-	n3, err := io.ReadAtLeast(f, b3, 2)
+	n3, err := io.ReadAtLeast(file, b3, 2)
 	check(err)
 	fmt.Printf("%d bytes @ %d: %s\n", n3, o3, string(b3))
 
-	_, err = f.Seek(0, 0)
+	_, err = file.Seek(0, 0)
 	check(err)
 
-	r4 := bufio.NewReader(f)
+	r4 := bufio.NewReader(file)
 	b4, err := r4.Peek(5)
 	check(err)
 	fmt.Printf("5 bytes: %s\n", string(b4))
-
-	f.Close()
 }
