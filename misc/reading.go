@@ -46,18 +46,24 @@ func main() {
 
 
 
-	o3, err := file.Seek(6, 0)
-	check(err)
-	b3 := make([]byte, 2)
-	n3, err := io.ReadAtLeast(file, b3, 2)
-	check(err)
-	fmt.Printf("%d bytes @ %d: %s\n", n3, o3, string(b3))
+	o1, err := file.Seek(2, 0)
+	fourChars := make([]byte, 4)
 
+	// ReadAtLeast reads from r into buf until it has read at least min bytes.
+	// It returns the number of bytes copied and an error if fewer bytes were read.
+	// The error is EOF only if no bytes were read.
+	n2, err := io.ReadAtLeast(file, fourChars, 4)
+	fmt.Printf("%d bytes @ %d: %s\n", n2, o1, string(fourChars))
+
+
+	// Rewind with Seek(0, 0)
 	_, err = file.Seek(0, 0)
 	check(err)
 
+	// Implement a buffered reader.
+	// Peek returns the next n bytes without advancing the reader.
 	r4 := bufio.NewReader(file)
-	b4, err := r4.Peek(5)
-	check(err)
+	b4, err := r4.Peek(6)
+
 	fmt.Printf("5 bytes: %s\n", string(b4))
 }
